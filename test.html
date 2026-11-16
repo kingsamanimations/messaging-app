@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+</head>
+<style type="text/css">
+    #wrapper {
+        max-width: 800px;
+        min-height: 500px;
+        display: flex;
+        margin: auto;
+        color: aliceblue;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        align-items: center;
+    }
+
+    #left-panel {
+        min-height: 0px;
+        background-color: rgb(37, 61, 61);
+        flex: 1;
+    }
+
+    #left-panel label{
+        width: 100%;
+        height: 120px;
+        display: block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgb(52, 95, 95);
+        border-bottom: solid thin white;
+        cursor: pointer;
+        padding: 5px;
+        transition: all 1s ease 1s;
+    }
+
+    #left-panel label:hover{
+        background-color: white;
+        width: 100%;
+        background-color: rgb(108, 167, 167);
+        border-left: 5px solid rgb(27, 27, 39);
+        transform: translateY(-10px);
+    }
+
+    #profile-img {
+       border-radius: 100%;
+       width: 40%;
+       height: 40%;
+       object-fit: cover;
+       border: 50%;
+       margin: 10px;
+       padding: 10px;
+    }
+
+    #left-panel label img {
+       float: right;
+       width: 25px;
+    }
+
+    #right-panel {
+        min-height: 700px;
+        background-color: rgb(242, 248, 248);
+        flex: 4;
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    #header {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: aqua;
+        height: 70px;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #inner-left-panel {
+        background-color: rgb(49, 49, 117);
+        display: block;
+        flex: 2;
+        min-height: 100%;
+    }
+
+    #inner-right-panel {
+        background-color: rgb(152, 152, 172);
+        display: flex;
+        flex: 2;
+        min-height: 630px;
+    }
+
+    #radio_chat:checked ~ #inner-right-panel {
+        flex: 0;
+    }
+
+    #radio_settings:checked ~ #inner-right-panel {
+        flex: 0;
+    }
+
+    #radio_settngs:checked ~ #inner-right-panel {
+        flex: 0;
+    }
+</style> 
+<body>
+    <div id="wrapper">
+        <!-- Account section -->
+        <div id="left-panel">
+            <div style="color: aliceblue; padding: 0px;">
+                <img id="profile-img" src="./img/images2.jpeg" alt="profile-picture" srcset="">
+                <br>
+                Ayra Olu
+                <br>
+                <span style="font-size: 12px; opacity: 0.5;">IamAyra@gmail.com</span>
+
+                <div id="buttons">
+                    <label for="radio_chat">Chat <img src="img/chats.png" alt="two-chats-icon" srcset=""></label><br>
+                    <label for="radio_contacts">Contacts<img src="img/contacts.png" alt="two-chats-icon" srcset=""></label>
+                    <label for="radio_settings">Settings<img src="img/settings.png" alt="two-chats-icon" srcset=""></label>
+                </div>
+            </div>
+        </div>
+        <div id="right-panel">
+            <div id="header">
+                <h2>Chat</h2>
+            </div>
+            <div id="container" style="display: flex">
+                <!-- Connected to buttons -->
+                <div class="inner-left-panel"></div>
+                <input type="radio_chat" id="radio_chat" name="myradio">
+                <input type="radio_settings" id="radio_contacts" name="myradio">
+                <input type="radio_contact" id="radio_settings" name="myradio">
+                <div class="inner-right-panel"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
